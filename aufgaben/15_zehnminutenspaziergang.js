@@ -1,6 +1,25 @@
 function isValidWalk(walk) {
-   // code here
-   
+    if (walk.length !== 10) return false;
+
+    let sam = {x:0, y:0}
+
+    for (i=0; i<10; i++) {
+        switch (walk[i]) {
+            case "n":
+                sam.y--;
+                break;
+            case "s":
+                sam.y++;
+                break;
+            case "w":
+                sam.x--;
+                break;
+            case "e":
+                sam.x++;
+                break;  
+        }
+    }
+    return (sam.x === 0 && sam.y === 0)
 }
 
 /*

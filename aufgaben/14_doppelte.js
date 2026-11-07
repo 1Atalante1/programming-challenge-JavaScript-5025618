@@ -1,14 +1,16 @@
 function duplicateCount(text) {
-   // code here
-   
-  
+let single = text.lowerCase().split(" ");
+let zahl = letters.filter(function(value, index, arr) {
+    return arr.indexOf(value) !== index && arr.lastIndexOf(value) === index;
+})   
+  return zahl.length;
 }
 
 /*
     Zählen Sie, wie viele verschiedene Buchstaben mehrmals vorkommen.
 */
 
-var assert = require('assert');
+let assert = require('assert');
 describe('Doppelte', function () {
     it('Beispiele', function () {
         assert.equal(duplicateCount(""), 0);
@@ -16,12 +18,3 @@ describe('Doppelte', function () {
         assert.equal(duplicateCount("bergtauglich"), 1);
     });
 });
-/*
-  Um den Code zu testen, richten Sie eine Testumgebung ein
-  1.) Installieren Sie Nodes (enhält npm) https://nodejs.org/en/
-  2.) Installieren Sie mocha mit $ npm install --global mocha https://mochajs.org/
-
-  Um einen Test auszuführen, tippen Sie auf der Kommandozeile
-  $ mocha <name_der_datei>
-
-*/
