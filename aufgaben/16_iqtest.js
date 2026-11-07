@@ -1,6 +1,7 @@
 function iqTest(numbers) {
-   // code here
-   
+    
+    
+
 }
 
 /*

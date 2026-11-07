@@ -1,5 +1,12 @@
 function toCamelCase(str) {
-   // code here
+   
+  let trennen = str.split(/[_\-]/);
+  let ccword = words[0];
+
+  for (i = 1; i < trennen.length; i++) {
+    ccword += trennen[i].charAt(0).toUpperCase() + trennen[i].slice(1)
+  }
+  return ccword;
    
 }
 

@@ -1,6 +1,28 @@
 function queueTime(customers, n) {
-   // code here
+   /* let time = 0;
+   let Kasse = new Array(n);
+   Kasse.fill(0);
+
+   while (true) {
+    for (t = 0; t < Kasse.length; t++) {
+        if (Kasse[t] > 1) {
+            Kasse[t]--;
+        }
+        else {
+            Kasse[t] = customers.shift() || 0;
+       }
+    }
+    if(costumers.length == 0 && Math.max(...Kasse) == 0)
+        return time;
+    time++;
+   } */
    
+let w = new Array(n).fill(0);
+for (let t of costomers) {
+    let ids = w.indexOf(Math.min(...w));
+    w[idx] += t;
+}
+return Math.max(...w);
 
 }
 
